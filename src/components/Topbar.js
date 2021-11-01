@@ -12,7 +12,7 @@ export default function Topbar() {
             </div>
             <form className="search">
                 <span style={{fontSize: '13px', marginRight: '20px'}}>https://link.snipfeed.co/mrsingh</span>
-                    <button style={{backgroundColor: '#ffffff', padding: '5px', borderRadius: '50px', width: '70px', height: '30px'}}> <span style={{fontSize: '13px', fontWeight: 'bold',position: 'relative', bottom: '5px', color: 'rgb(242, 98, 124)'}}>Copy</span> </button>
+                    <button className="button2"> <span style={{fontSize: '13px', fontWeight: 'bold',position: 'relative', bottom: '5px'}}>Copy</span> </button>
             </form>
             
         </div>

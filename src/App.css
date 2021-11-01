@@ -1,8 +1,8 @@
 @import url("./components/styles/sidebar.css");
 body {
-  background-color: #FAF6F3;
+  background-color: #faf6f3;
 }
-.windowheader{
+.windowheader {
   font-weight: bold;
   font-size: 15px;
 }
@@ -10,13 +10,26 @@ body {
 .search {
   margin: 9px;
   padding: 5px;
-  background-color: #FAF6F3;
+  background-color: #faf6f3;
   background-clip: padding-box;
   border-radius: 50px;
 }
-.search button{
+.search button {
   border: 1px solid #ffffff;
 }
+.button2 {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 50px;
+  width: 70px;
+  height: 30px;
+  color: rgb(242, 98, 124);
+}
+.button2:hover {
+  background-color: #fd7b6a;
+  color: white;
+}
+
 .topItem {
   display: flex;
   justify-content: center;
@@ -40,7 +53,7 @@ body {
 }
 .arrowStyle {
   width: 80px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
   bottom: 20px;
   border-bottom-left-radius: 20px;
@@ -51,7 +64,7 @@ body {
   font-weight: 450;
   margin-left: 15px;
   margin-top: 10px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   width: fit-content;
   padding: 5px;
   border-radius: 20px;
@@ -70,7 +83,7 @@ body {
   text-align: center;
   margin: auto;
   margin-top: 20px;
-  background-color: #FAF5F2;
+  background-color: #faf5f2;
   height: 40rem;
   border-radius: 40px;
   border: 5px solid black;
@@ -80,9 +93,14 @@ body {
   height: 65px;
   border-radius: 20px;
   text-align: left;
-  background-color: #FE918C;
-  border: 1px solid #FE918C;
+  background-color: #fe918c;
+  border: 1px solid #fe918c;
   color: white;
+}
+.support:hover {
+  background-color: #fbc3be;
+  color: black;
+  border: 1px solid #fbc3be;
 }
 .iconBlock2 {
   text-align: center;
@@ -90,7 +108,16 @@ body {
   display: flex;
   flex-direction: column;
 }
-hr{
+hr {
   height: 1px;
   opacity: 0.1;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: unset;
+}
+.down {
+  transform: rotate(180deg);
 }

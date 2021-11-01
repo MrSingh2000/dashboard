@@ -26,15 +26,31 @@ export default function Window() {
     let names2 = ["Livestreams", "Shoutouts/Q&As", "Exclusive Content", "Tipping"];
     let colors2 = ["#FFEEF2", "#FEF8D4", "#F3EEFF", "#FFF5F7"];
 
+    const handleClick = () => {        
+        let e = document.querySelector('.animate');
+        let img = document.querySelector('.changeimg');
+        if(e.classList.contains('hide')){
+            e.classList.remove('hide');
+            e.classList.add('show');
+            img.classList.remove('down');
+        }
+        else if(e.classList.contains('show')){
+            e.classList.remove('show');
+            e.classList.add('hide');
+            img.classList.add('down');
+        }
+        
+    }
+
     return (
-        <div style={{width: '700px', textAlign: 'center' }}>
+        <div style={{ width: '700px', textAlign: 'center' }}>
             <div className="container" style={{ margin: '20px', backgroundColor: '#FFFFFF' }}>
                 <p className="windowheader">Add Block</p>
                 <div className="row">
                     {icons.map((e) => {
                         return (
                             <div className="col" key={e}>
-                                <div className="iconBlock" style={{backgroundColor: `${colors[icons.indexOf(e)]}`}}>
+                                <div className="iconBlock" style={{ backgroundColor: `${colors[icons.indexOf(e)]}` }}>
                                     <img src={e} alt="img" height='30px' />
                                 </div>
                                 <p style={{ fontSize: '13px' }}>{names[icons.indexOf(e)]}</p>
@@ -42,46 +58,48 @@ export default function Window() {
                     })}
                 </div>
                 <hr />
-                <p className="windowheader">Monitizable Blocks</p>
-                <div className="row">
-                    {icons2.map((e) => {
-                        return (
-                            <div className="col iconBlock2" key={e}>
-                                <div className="iconBlock" style={{backgroundColor: `${colors2[icons2.indexOf(e)]}`}}>
-                                    <img src={e} alt="img" height='30px' />
-                                </div>
-                                <p style={{ fontSize: '13px', marginLeft: '8px' }}>{names2[icons2.indexOf(e)]}</p>
-                            </div>)
-                    })}
+                <div className="animate show">
+                    <p className="windowheader">Monitizable Blocks</p>
+                    <div className="row">
+                        {icons2.map((e) => {
+                            return (
+                                <div className="col iconBlock2" key={e}>
+                                    <div className="iconBlock" style={{ backgroundColor: `${colors2[icons2.indexOf(e)]}` }}>
+                                        <img src={e} alt="img" height='30px' />
+                                    </div>
+                                    <p style={{ fontSize: '13px', marginLeft: '8px' }}>{names2[icons2.indexOf(e)]}</p>
+                                </div>)
+                        })}
+                    </div>
                 </div>
             </div>
-            <div className="container arrowStyle"><img src={top} alt="arrow" height="20px" /></div>
-            <div style={{ textAlign: 'left', backgroundColor: '#FFFFFF',marginTop: '-7px', margin: '20px', width: '700px' }}>
+            <div className="container arrowStyle" onClick={handleClick}><img className="changeimg" src={top} alt="arrow" height="20px" /></div>
+            <div style={{ textAlign: 'left', backgroundColor: '#FFFFFF', marginTop: '-7px', margin: '20px', width: '700px' }}>
                 <p className="pageHeader">Page Header</p>
                 <hr />
-                <div style={{display: 'flex', marginLeft: '15px'}}>
-                    <div><img src={user} alt="user" height='50px'/></div>
-                    <div style={{marginLeft: '15px'}}>
+                <div style={{ display: 'flex', marginLeft: '15px' }}>
+                    <div><img src={user} alt="user" height='50px' /></div>
+                    <div style={{ marginLeft: '15px' }}>
                         <p className="addBio">Add Your Bio</p>
                         <p className="profilePic">Profile Pic, Name and Bio</p>
                     </div>
                 </div>
             </div>
-            <div style={{ textAlign: 'left', backgroundColor: '#FFFFFF', margin: '20px',width: '700px' }}>
-                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <div style={{ textAlign: 'left', backgroundColor: '#FFFFFF', margin: '20px', width: '700px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div className="d-flex">
-                    <p className="pageHeader" style={{backgroundColor: '#f9748f1f', color: '#f2627c'}}> <span style={{position: 'relative', bottom:'2px'}}><img src={star} alt="star" height="12px"/></span> Monetizable</p>
-                    <p className="pageHeader">Tipping</p>
+                        <p className="pageHeader" style={{ backgroundColor: '#f9748f1f', color: '#f2627c' }}> <span style={{ position: 'relative', bottom: '2px' }}><img src={star} alt="star" height="12px" /></span> Monetizable</p>
+                        <p className="pageHeader">Tipping</p>
                     </div>
-                    <div className="d-flex" style={{marginRight: '15px'}}>
-                        <img src={eye} alt="eye" height='25px' style={{marginRight: '15px'}}/>
-                        <img src={grid} alt="grid" height='25px'/>
+                    <div className="d-flex" style={{ marginRight: '15px' }}>
+                        <img src={eye} alt="eye" height='25px' style={{ marginRight: '15px' }} />
+                        <img src={grid} alt="grid" height='25px' />
                     </div>
                 </div>
-                <hr style={{position: 'relative', bottom: '13px'}}/>
-                <div style={{display: 'flex', marginLeft: '15px'}}>
-                    <div><img src={heartBlack} alt="heart" height="50px"/></div>
-                    <div style={{marginLeft: '15px'}}>
+                <hr style={{ position: 'relative', bottom: '13px' }} />
+                <div style={{ display: 'flex', marginLeft: '15px' }}>
+                    <div><img src={heartBlack} alt="heart" height="50px" /></div>
+                    <div style={{ marginLeft: '15px' }}>
                         <p className="addBio">Tipping</p>
                         <p className="profilePic">Let your followers show their support!</p>
                     </div>
