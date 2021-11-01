@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+@import url("./components/styles/sidebar.css");
+body {
+  background-color: #FAF6F3;
+}
+.windowheader{
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search {
+  margin: 9px;
+  padding: 5px;
+  background-color: #FAF6F3;
+  background-clip: padding-box;
+  border-radius: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search button{
+  border: 1px solid #ffffff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.topItem {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+}
+.iconBlock {
+  /* background-color: orange; */
+  height: 50px;
+  width: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 18px;
+  margin-left: 13px;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrowStyle {
+  width: 80px;
+  background-color: #FFFFFF;
+  position: relative;
+  bottom: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.pageHeader {
+  font-size: 10px;
+  font-weight: 450;
+  margin-left: 15px;
+  margin-top: 10px;
+  background-color: #F5F5F5;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 20px;
+}
+.addBio {
+  font-size: large;
+  font-weight: 500;
+}
+.profilePic {
+  font-size: small;
+  font-weight: 450;
+  line-height: 1px;
+}
+.mobile {
+  width: 19rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #FAF5F2;
+  height: 40rem;
+  border-radius: 40px;
+  border: 5px solid black;
+}
+.support {
+  width: 90%;
+  height: 65px;
+  border-radius: 20px;
+  text-align: left;
+  background-color: #FE918C;
+  border: 1px solid #FE918C;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.iconBlock2 {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr{
+  height: 1px;
+  opacity: 0.1;
 }
